@@ -14,7 +14,7 @@ header .number {
   font-weight: bold;
   color: #ED458B;
   font-size: 36px;
-  margin: 3px 0;
+  margin: 7px 0;
 }
 
 header .guesser {
@@ -22,7 +22,7 @@ header .guesser {
   font-weight: lighter;
   color: #E6E7E8;
   font-size: 36px;
-  margin: 3px 0;
+  margin: 7px 0;
 }
 
 header {
@@ -44,4 +44,32 @@ header {
 
 .reset {
   margin: 20px 0;
+}
+
+.buttons {
+  margin: 20px 0;
+  display: block;
+}
+
+button {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #FFFFFF;
+  background-color: #D0D2D3;
+  border: none;
+  padding: 5px 32px;
+  margin: 0 8px;
+  text-decoration: none;
+  border-radius: 40px;
+
+}
+
+button:hover {
+  background-color: #EB008B;
+}
+
+input {
+  padding: 2px 0;
+  width: 100%;
+  font-size: 16px
 }
