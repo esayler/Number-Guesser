@@ -1,0 +1,47 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.title {
+  height:45px;
+  text-align: center;
+}
+
+header .number {
+  display: inline-block;
+  font-weight: bold;
+  color: #ED458B;
+  font-size: 36px;
+  margin: 3px 0;
+}
+
+header .guesser {
+  display: inline-block;
+  font-weight: lighter;
+  color: #E6E7E8;
+  font-size: 36px;
+  margin: 3px 0;
+}
+
+header {
+  background-color: #404041;
+  height: 50px;
+}
+
+.guess-form {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.last-guess {
+  margin: 20px 0;
+  color: #EB008B;
+  font-size: 86px;
+  /*font-weight: lighter;*/
+}
+
+.reset {
+  margin: 20px 0;
+}
