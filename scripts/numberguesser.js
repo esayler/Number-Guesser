@@ -20,10 +20,10 @@ function createInput() {
 //test currentGuess
 function testCurrentGuess(currentGuess) {
   if (currentGuess >100 || currentGuess < 1) {
-    alert("Please enter a number between 1 and 100.");
+    return "Please enter a number between 1 and 100.";
   }
     else if (isNaN(currentGuess) === true) {
-      alert("You must enter a NUMBER between 1 and 100.");
+      return "You must enter a NUMBER between 1 and 100.";
     }
       else if (currentGuess > secretNumber) {
         return("That is too high!");
