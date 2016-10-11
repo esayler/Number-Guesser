@@ -33,7 +33,7 @@ function testCurrentGuess(currentGuess) {
 }
 
 function updateText(newGuessValue, hintText) {
-  if (isNaN(currentGuess) === false) {
+  if (isNaN(newGuessValue) === false) {
     document.querySelector('.last-guess').innerText = newGuessValue;
     document.querySelector('.hint').innerText = hintText;
   }
