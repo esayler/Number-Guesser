@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true;">
     <title>Number Guesser</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
@@ -15,26 +16,23 @@
       </div>
     </header>
 
-    <div class="guess-form">
+    <div class="container-inline-block">
+      <input type="text" name="guess" id="current-guess" placeholder="Enter your guess" />
 
-    <input type="text" name="guess" id="current-guess" value="" />
+      <div class="container button">
+        <button class="guess-button">Guess</button>
+        <button class="clear-button">Clear</button>
+      </div>
 
-    <div class="buttons">
-      <button class="guess-button">Guess</button>
-      <button class="clear-button">Clear</button>
-    </div>
+      <div class="container-inline block">
+        <h2>Your last guess was</h2>
+        <h3 class="last-guess">N/A</h3>
+        <h2 class="hint">That is too high</h2>
+      </div>
 
-    </div>
-
-    <div>
-    <h2>Your last guess was</h2>
-    <h3 class="last-guess">N/A</h3>
-
-    <h2 class="hint">That is too high</h2>
-    </div>
-
-    <div class="reset">
-    <button class="reset-button">Reset</button>
+      <div class="container-inline button">
+        <button class="reset-button">Reset</button>
+      </div>
     </div>
 
     <footer>
