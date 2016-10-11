@@ -19,18 +19,21 @@ function createInput() {
 
 //test currentGuess
 function testCurrentGuess(currentGuess) {
-  if (currentGuess >100 || currentGuess < 1 || isNaN(currentGuess) === true) {
+  if (currentGuess >100 || currentGuess < 1) {
     alert("Please enter a number between 1 and 100.");
   }
-    else if (currentGuess > secretNumber) {
-      return("That is too high!");
+    else if (isNaN(currentGuess) === true) {
+      alert("You must enter a NUMBER between 1 and 100.");
     }
-      else if (currentGuess < secretNumber) {
-        return("That is too low!");
+      else if (currentGuess > secretNumber) {
+        return("That is too high!");
       }
-        else if(currentGuess === secretNumber) {
-          return("YOU GOT IT!");
+        else if (currentGuess < secretNumber) {
+          return("That is too low!");
         }
+          else if(currentGuess === secretNumber) {
+            return("YOU GOT IT!");
+          }
 }
 
 function updateText(newGuessValue, hintText) {
@@ -51,7 +54,8 @@ function clearCurrentGuess() {
 function resetPage() {
   clearCurrentGuess();
   updateText('none', null);
-
+  secretNumber = setSecretNumber();
+  console.log(secretNumber);
 }
 
 //Guess button
