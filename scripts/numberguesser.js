@@ -8,6 +8,7 @@ function setSecretNumber() {
 }
 
 var secretNumber = setSecretNumber();
+
 console.log(secretNumber);
 
 //create currentGuess
@@ -37,6 +38,10 @@ function updateText(newGuessValue, hintText) {
     document.querySelector('.last-guess').innerText = newGuessValue;
     document.querySelector('.hint').innerText = hintText;
   }
+    else if(newGuessValue === 'none') {
+      document.querySelector('.last-guess').innerText = "N/A";
+      document.querySelector('.hint').innerText = "Waiting for your guess...";
+    }
 }
 
 function clearCurrentGuess() {
@@ -44,7 +49,9 @@ function clearCurrentGuess() {
 }
 
 function resetPage() {
-  return document.getElementById('guess-form').reset;
+  clearCurrentGuess();
+  updateText('none', null);
+
 }
 
 //Guess button
