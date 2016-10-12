@@ -28,8 +28,8 @@ header {
 }
 
 .container-inline-block {
-  margin: 20px auto;
   display: inline-block;
+  margin: 20px auto;
 }
 
 .container-block {
@@ -45,9 +45,9 @@ header {
 
 input {
   border: 1px solid #D0D2D3;
+  font-size: 14px;
   padding: 2px 5px;
   width: 100%;
-  font-size: 14px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -68,15 +68,24 @@ input {
   width: 100%;
 }
 
+button:disabled,
+button[disabled]:active,
+button[disabled]:hover
+{
+  background-color: #ededed;
+  color: #D0D2D3;
+  cursor: inherit;
+}
+
 button {
-  font-weight: lighter;
-  color: #FFFFFF;
   background-color: #D0D2D3;
   border: none;
-  width: 100px;
+  border-radius: 40px;
+  color: #FFFFFF;
+  font-weight: lighter;
   margin: 20px 5px;
   text-decoration: none;
-  border-radius: 40px;
+  width: 100px;
 }
 
 button:hover {
@@ -99,8 +108,8 @@ button:active {
   }
 
   button {
-    width: 200px;
     margin: 10px auto;
+    width: 200px;
   }
 }
 
@@ -110,6 +119,14 @@ button:active {
     padding: 10px 0;
     text-align: center;
   }
+}
+
+@media screen and (min-width: 200px) {
+  .hint, .last-guess {
+    margin: 0 auto;
+    width: 200px;
+  }
+
 }
 
 @media screen and (max-width: 275px) {

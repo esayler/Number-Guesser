@@ -2,6 +2,9 @@ var guessButton = document.querySelector('.guess-button');
 var clearButton = document.querySelector('.clear-button');
 var resetButton = document.querySelector('.reset-button');
 
+resetButton.disabled = true;
+clearButton.disabled = true;
+
 //create secretNumber
 function setSecretNumber() {
   return(Math.floor((Math.random() * 100) + 1));
@@ -49,12 +52,15 @@ function updateText(newGuessValue, hintText) {
 
 function clearCurrentGuess() {
   document.getElementById("current-guess").value = '';
+  clearButton.disabled = true;
 }
 
 function resetPage() {
   clearCurrentGuess();
   updateText('none', null);
   secretNumber = setSecretNumber();
+  clearButton.disabled = true;
+  resetButton.disabled = true;
   console.log(secretNumber);
 }
 
@@ -63,7 +69,8 @@ guessButton.addEventListener('click', function() {
 
   var currentGuess = createInput();
   updateText (currentGuess, testCurrentGuess(currentGuess));
-
+  resetButton.disabled = false;
+  clearButton.disabled = false;
 });
 
 clearButton.addEventListener('click', function() {
