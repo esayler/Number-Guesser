@@ -62,7 +62,7 @@ function updateText(newGuessValue, hintText) {
     document.querySelector('.hint').innerText = hintText;
   }
     else if(newGuessValue === 'none') {
-      document.querySelector('.last-guess').innerText = "N/A";
+      document.querySelector('.last-guess').innerText = "";
       document.querySelector('.hint').innerText = "Waiting for your guess...";
     }
 }
