@@ -6,7 +6,7 @@ var minMaxButton = document.querySelector('.minmax-button');
 resetButton.disabled = true;
 clearButton.disabled = true;
 
-var secretNumber = setSecretNumber();
+var secretNumber = setSecretNumber(1, 100);
 
 //min and max variables and setter function
 function setMinMax (minValue, maxValue) {
