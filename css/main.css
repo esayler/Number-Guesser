@@ -1,11 +1,11 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 100%;
   text-align: center;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 100%;
   padding: 7px 0;
   text-align: center;
 }
@@ -30,22 +30,28 @@ header {
 .container-inline-block {
   display: inline-block;
   margin: 20px auto;
+  /*height: auto;*/
 }
 
 .container-block {
   display: block;
 }
 
+.top-message {
+  margin: 20px 0 0 0;
+}
 
 .last-guess {
   color: #EB008B;
   font-size: 86px;
-  margin: 20px 0;
+  font-weight: lighter;
+  margin: 25px 0;
+  /*overflow: scroll;*/
+  overflow: hidden;
 }
 
 input {
   border: 1px solid #D0D2D3;
-  font-size: 14px;
   padding: 2px 5px;
   width: 100%;
 }
@@ -94,6 +100,7 @@ button[disabled]:hover
 }
 
 button {
+  font-size: 75%;
   background-color: #D0D2D3;
   border: none;
   border-radius: 40px;
@@ -101,6 +108,7 @@ button {
   font-weight: lighter;
   margin: 20px 5px;
   text-decoration: none;
+  padding: 3px 5px 2px 5px;
   width: 100px;
 }
 
@@ -117,7 +125,7 @@ button:active {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 420px) {
 
   .container button {
     display: block;
@@ -127,11 +135,23 @@ button:active {
     margin: 10px auto;
     width: 200px;
   }
+
+  .hint {
+    height: 50px;
+    margin: 10px 0;
+    vertical-align: auto;
+  }
+
+  .title {
+    font-size: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 300px) {
   .title {
-    font-size: 24px;
+    font-size: 80%;
     padding: 10px 0;
     text-align: center;
   }
@@ -158,8 +178,10 @@ button:active {
     width: 90%;
   }
 
+  .title {
+    font-size: 60%;
+  }
   .last-guess {
     font-size: 64px;
-
   }
 }
