@@ -7,27 +7,36 @@ resetButton.disabled = true;
 clearButton.disabled = true;
 
 
+
+// initialize min/max to 1-100 on page load
+
+//var min = document.querySelector('#min-range').value;
+//var max = document.querySelector('#max-range').value;
+displayMinMax (1, 100);
+setMinMax(1, 100);
+var secretNumber = setSecretNumber(min, max);
+
+
 //min and max variables and setter function
-function setMinMax (minValue, maxValue) {
+function displayMinMax (minValue, maxValue) {
   document.getElementById('min-range').value = minValue;
   document.getElementById('max-range').value = maxValue;
 }
 
-setMinMax (1, 100);
-
-var min = document.querySelector('#min-range').value;
-var max = document.querySelector('#max-range').value;
-
-
+function setMinMax() {
+  min = document.getElementById('min-range').value;
+  max = document.getElementById('max-range').value;
+  console.log("min: " + min + " max: " + max);
+}
 
 //create secretNumber
 function setSecretNumber(min,max) {
-  return Math.floor(Math.random()*(max-min+1)+min);
+  var val = Math.floor(Math.random()*(max-min+1)+min);
+  console.log("new secret number: " + val);
+  return val;
+
 }
 
-var secretNumber = setSecretNumber(min, max);
-
-console.log(secretNumber);
 
 //create currentGuess
 function createInput() {
@@ -36,10 +45,11 @@ function createInput() {
 }
 
 //test currentGuess
+//TODO: add validation for new min/max values
 function testCurrentGuess(currentGuess) {
 
   if (currentGuess > max || currentGuess < min) {
-    return "Please enter a number between 1 and 100.";
+    return "Please enter a number between " + min + " and " + max;
   }
     else if (isNaN(currentGuess) === true) {
       return "You must enter a NUMBER between 1 and 100.";
@@ -74,11 +84,12 @@ function clearCurrentGuess() {
 function resetPage() {
   clearCurrentGuess();
   updateText('none', null);
-  setMinMax (1, 100);
+  setMinMax(1, 100);
+  displayMinMax (1, 100);
   secretNumber = setSecretNumber();
   clearButton.disabled = true;
   resetButton.disabled = true;
-  console.log(secretNumber);
+  console.log("reset secret number: " + secretNumber);
 }
 
 //Guess button
@@ -99,5 +110,6 @@ resetButton.addEventListener('click', function() {
   });
 
 minMaxButton.addEventListener('click', function() {
+  setMinMax();
   setSecretNumber(min, max);
 })
