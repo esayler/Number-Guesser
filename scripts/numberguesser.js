@@ -18,17 +18,11 @@ var min = document.querySelector('#min-range').value;
 var max = document.querySelector('#max-range').value;
 
 //create secretNumber
-function setSecretNumber() {
-  return(Math.floor((Math.random() * 100) + 1));
+function setSecretNumber(min,max) {
+  return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-//function randomIntFromInterval(min,max)
-//function setSecretNumber(min,max)
-//{
-//    return Math.floor(Math.random()*(max-min+1)+min);
-//}
-
-var secretNumber = setSecretNumber();
+var secretNumber = setSecretNumber(min, max);
 
 console.log(secretNumber);
 
@@ -40,6 +34,7 @@ function createInput() {
 
 //test currentGuess
 function testCurrentGuess(currentGuess) {
+  setSecretNumber(min, max);
 
   if (currentGuess > max || currentGuess < min) {
     return "Please enter a number between 1 and 100.";
