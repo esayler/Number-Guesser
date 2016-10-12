@@ -50,8 +50,24 @@ input {
   width: 100%;
 }
 
+.minmax {
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 20px 15px;
+}
+
+.minmax input {
+  margin: auto;
+}
+
+.minmax h4 {
+  margin-bottom: 5px;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #D0D2D3;
+  text-align: center;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: #D0D2D3;
