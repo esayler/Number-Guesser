@@ -7,6 +7,7 @@ resetButton.disabled = true;
 clearButton.disabled = true;
 
 var secretNumber = setSecretNumber(1, 100);
+console.log("Secret number is: " + secretNumber);
 
 //min and max variables and setter function
 function setMinMax (minValue, maxValue) {
@@ -57,14 +58,21 @@ function testCurrentGuess(currentGuess) {
 }
 
 function updateText(newGuessValue, hintText) {
-  if (isNaN(newGuessValue) === false) {
+  if (newGuessValue === secretNumber && isNaN(newGuessValue) ===false) {
     document.querySelector('.last-guess').innerText = newGuessValue;
     document.querySelector('.hint').innerText = hintText;
+    var updatedMin = currentMin()-10;
+    var updatedMax = currentMax()+10;
+    setMinMax(updatedMin, updatedMax);
   }
-    else if(newGuessValue === 'none') {
-      document.querySelector('.last-guess').innerText = "";
-      document.querySelector('.hint').innerText = "Waiting for your guess...";
+    if (isNaN(newGuessValue) === false) {
+      document.querySelector('.last-guess').innerText = newGuessValue;
+      document.querySelector('.hint').innerText = hintText;
     }
+      else if(newGuessValue === 'none') {
+        document.querySelector('.last-guess').innerText = "";
+        document.querySelector('.hint').innerText = "Waiting for your guess...";
+      }
 }
 
 function clearCurrentGuess() {
