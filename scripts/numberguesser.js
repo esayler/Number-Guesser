@@ -1,6 +1,7 @@
 var guessButton = document.querySelector('.guess-button');
 var clearButton = document.querySelector('.clear-button');
 var resetButton = document.querySelector('.reset-button');
+var minMaxButton = document.querySelector('.min-max-button');
 
 resetButton.disabled = true;
 clearButton.disabled = true;
@@ -16,6 +17,8 @@ setMinMax (1, 100);
 
 var min = document.querySelector('#min-range').value;
 var max = document.querySelector('#max-range').value;
+
+
 
 //create secretNumber
 function setSecretNumber(min,max) {
@@ -34,7 +37,6 @@ function createInput() {
 
 //test currentGuess
 function testCurrentGuess(currentGuess) {
-  setSecretNumber(min, max);
 
   if (currentGuess > max || currentGuess < min) {
     return "Please enter a number between 1 and 100.";
@@ -95,3 +97,7 @@ clearButton.addEventListener('click', function() {
 resetButton.addEventListener('click', function() {
     resetPage();
   });
+
+minMaxButton.addEventListener('click', function() {
+  setSecretNumber(min, max);
+})
