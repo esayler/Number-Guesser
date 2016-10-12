@@ -5,10 +5,28 @@ var resetButton = document.querySelector('.reset-button');
 resetButton.disabled = true;
 clearButton.disabled = true;
 
+
+//min and max variables and setter function
+function setMinMax (minValue, maxValue) {
+  document.getElementById('min-range').value = minValue;
+  document.getElementById('max-range').value = maxValue;
+}
+
+setMinMax (1, 100);
+
+var min = document.querySelector('#min-range').value;
+var max = document.querySelector('#max-range').value;
+
 //create secretNumber
 function setSecretNumber() {
   return(Math.floor((Math.random() * 100) + 1));
 }
+
+//function randomIntFromInterval(min,max)
+//function setSecretNumber(min,max)
+//{
+//    return Math.floor(Math.random()*(max-min+1)+min);
+//}
 
 var secretNumber = setSecretNumber();
 
@@ -22,7 +40,8 @@ function createInput() {
 
 //test currentGuess
 function testCurrentGuess(currentGuess) {
-  if (currentGuess >100 || currentGuess < 1) {
+
+  if (currentGuess > max || currentGuess < min) {
     return "Please enter a number between 1 and 100.";
   }
     else if (isNaN(currentGuess) === true) {
@@ -58,6 +77,7 @@ function clearCurrentGuess() {
 function resetPage() {
   clearCurrentGuess();
   updateText('none', null);
+  setMinMax (1, 100);
   secretNumber = setSecretNumber();
   clearButton.disabled = true;
   resetButton.disabled = true;
