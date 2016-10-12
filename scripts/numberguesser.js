@@ -64,6 +64,8 @@ function updateText(newGuessValue, hintText) {
     var updatedMin = currentMin()-10;
     var updatedMax = currentMax()+10;
     setMinMax(updatedMin, updatedMax);
+    secretNumber = setSecretNumber();
+    console.log("New secret number: " + secretNumber);
   }
     if (isNaN(newGuessValue) === false) {
       document.querySelector('.last-guess').innerText = newGuessValue;
