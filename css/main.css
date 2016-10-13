@@ -15,7 +15,7 @@ header {
 }
 
 .title-container {
-  font-size: 64px;
+  font-size: 36px;
   padding: 7px 0;
 }
 
@@ -153,6 +153,10 @@ button:active {
 
 @media screen and (min-width: 500px) {
 
+  .title-container {
+    font-size: 54px;
+  }
+
   .guess-button, .clear-button {
     display: inline-block;
     width: 35%;
@@ -170,7 +174,11 @@ button:active {
     margin-left: 40px;
   }
 
+
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .title-container {
+    font-size: 48px;
+  }
 }
