@@ -159,8 +159,8 @@ button:active {
 
   .guess-button, .clear-button {
     display: inline-block;
-    width: 35%;
-    margin: 20px 20px;
+    width: 175px;
+    margin: 20px 10px;
 
   }
 
@@ -177,7 +177,15 @@ button:active {
 
 }
 
-@media screen and (min-width: 300px) and (max-width: 500px) {
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  .title-container {
+    font-size: 36px;
+  }
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
   .title-container {
     font-size: 48px;
   }
