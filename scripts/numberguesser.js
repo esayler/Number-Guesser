@@ -92,7 +92,6 @@ function resetPage() {
   console.log("New secret number: " + secretNumber);
 }
 
-
 //Guess button
 guessButton.addEventListener('click', function() {
   var currentGuess = createInput();
