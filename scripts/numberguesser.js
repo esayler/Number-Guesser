@@ -92,9 +92,6 @@ function resetPage() {
   console.log("New secret number: " + secretNumber);
 }
 
-// var min = document.querySelector('#min-range').value;
-// var max = document.querySelector('#max-range').value;
-// console.log(min, max);
 
 //Guess button
 guessButton.addEventListener('click', function() {
