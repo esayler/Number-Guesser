@@ -51,11 +51,6 @@ input {
   margin: 25px 0;
 }
 
-/*.minmax-box {
-  position: relative;
-}*/
-
-
 .minmax {
   width: 60px;
   display: inline-block;
@@ -63,13 +58,12 @@ input {
 }
 
 .minmax input {
-  /*position: relative;*/
-  /*margin: auto;*/
-  padding-left: 15px;
+  margin: 0 -20px;
+  text-align: center;
 }
 
 .minmax h4 {
-  margin-bottom: 5px;
+  margin: 3px 0;
 }
 
 .minmax-button {
