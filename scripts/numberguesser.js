@@ -96,6 +96,7 @@ function resetPage() {
   secretNumber = setSecretNumber(min, max);
   clearButton.disabled = true;
   resetButton.disabled = true;
+  document.querySelector('.last-guess-message').innerText = "";
   console.log("New secret number: " + secretNumber);
 }
 
