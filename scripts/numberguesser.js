@@ -119,10 +119,12 @@ resetButton.addEventListener('click', function() {
 minMaxButton.addEventListener('click', function() {
   if (currentMin() >= currentMax()) {
     alert("Please enter a minimum value that is less than your maximum value...duh...");
+    // document.querySelector('.hint').innerText = "Please enter a minimum value that is less than your maximum value...duh!";
   }
     else {
       console.log("Current Min: " + currentMin() + " and Current Max: " + currentMax());
       secretNumber = setSecretNumber();
       console.log("New secret number is: " + secretNumber);
+      // document.querySelector('.hint').innerText = "Waiting for your guess...";
     }
 });
