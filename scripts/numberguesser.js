@@ -1,3 +1,4 @@
+//Creating button ref
 var guessButton = document.querySelector('.guess-button');
 var clearButton = document.querySelector('.clear-button');
 var resetButton = document.querySelector('.reset-button');
@@ -6,6 +7,7 @@ var minMaxButton = document.querySelector('.minmax-button');
 resetButton.disabled = true;
 clearButton.disabled = true;
 
+//establshing secretNumber on page load
 var secretNumber = setSecretNumber(1, 100);
 console.log("Secret number is: " + secretNumber);
 
@@ -15,10 +17,10 @@ function setMinMax (minValue, maxValue) {
   document.getElementById('max-range').value = maxValue;
 }
 
+//pulling current Min and Max values
 function currentMin() {
   return parseInt(document.getElementById('min-range').value);
 }
-
 function currentMax() {
   return parseInt(document.getElementById('max-range').value);
 }
@@ -37,7 +39,7 @@ function createInput() {
   return (parseInt(currentValue, 10));
 }
 
-//test currentGuess
+//test currentGuess and return hint text
 function testCurrentGuess(currentGuess) {
 
   if (currentGuess > currentMax() || currentGuess < currentMin()) {
@@ -53,10 +55,11 @@ function testCurrentGuess(currentGuess) {
           return("That is too low!");
         }
           else if(currentGuess === secretNumber) {
-            return("YOU GOT IT! Try again with a longer range!");
+            return("YOU GOT IT! Try again with a bigger range!");
           }
 }
 
+//function to update text on page after guess is processed
 function updateText(newGuessValue, hintText) {
   if (newGuessValue === secretNumber && isNaN(newGuessValue) ===false) {
     document.querySelector('.last-guess').innerText = newGuessValue;
@@ -77,11 +80,13 @@ function updateText(newGuessValue, hintText) {
       }
 }
 
+//function to clear the guess form on button click
 function clearCurrentGuess() {
   document.getElementById("current-guess").value = '';
   clearButton.disabled = true;
 }
 
+//function to reset the full page back to initial settings
 function resetPage() {
   clearCurrentGuess();
   updateText('none', null);
@@ -100,16 +105,24 @@ guessButton.addEventListener('click', function() {
   clearButton.disabled = false;
 });
 
+//Clear button
 clearButton.addEventListener('click', function() {
   clearCurrentGuess();
 });
 
+//Reset button
 resetButton.addEventListener('click', function() {
   resetPage();
 });
 
+//Set min and max range button
 minMaxButton.addEventListener('click', function() {
-  console.log("Current Min: " + currentMin() + " and Current Max: " + currentMax());
-  secretNumber = setSecretNumber();
-  console.log("New secret number is: " + secretNumber);
+  if (currentMin() >= currentMax()) {
+    alert("Please enter a minimum value that is less than your maximum value...duh...");
+  }
+    else {
+      console.log("Current Min: " + currentMin() + " and Current Max: " + currentMax());
+      secretNumber = setSecretNumber();
+      console.log("New secret number is: " + secretNumber);
+    }
 });
