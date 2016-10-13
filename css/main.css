@@ -41,8 +41,6 @@ input {
 
 input:focus{
   outline: none;
-  box-shadow: none;
-  outline: none;
 }
 
 /* remove spinners from number input boxes */
