@@ -4,37 +4,40 @@ body {
   text-align: center;
 }
 
-.title {
-  font-size: 100%;
-  padding: 7px 0;
-  text-align: center;
-}
-
-.number {
-  color: #ED458B;
-  display: inline;
-  font-weight: bold;
-}
-
-.guesser {
-  color: #E6E7E8;
-  display: inline;
-  font-weight: lighter;
-}
-
 header {
   background-color: #404041;
   height: auto;
 }
 
-.container-inline-block {
-  display: inline-block;
-  margin: 20px auto;
-  /*height: auto;*/
+.title1,
+.title2 {
+  display: inline;
 }
 
-.container-block {
-  display: block;
+.title-container {
+  font-size: 64px;
+  padding: 7px 0;
+}
+
+.title1 {
+  color: #ED458B;
+  font-weight: bold;
+}
+
+.title2 {
+  color: #E6E7E8;
+  font-weight: lighter;
+}
+
+input {
+  color: #404041;
+  border: 1px solid #D0D2D3;
+  padding: 2px 15px;
+  width: 95%;
+  height: 35px;
+  font-size: 24px;
+  font-weight: lighter;
+
 }
 
 .top-message {
@@ -46,53 +49,35 @@ header {
   font-size: 86px;
   font-weight: lighter;
   margin: 25px 0;
-  /*overflow: scroll;*/
-  overflow: hidden;
 }
 
-input {
-  border: 1px solid #D0D2D3;
-  padding: 2px 5px;
-  width: 100%;
-}
+/*.minmax-box {
+  position: relative;
+}*/
+
 
 .minmax {
-  width: 50px;
-  text-align: center;
+  width: 60px;
   display: inline-block;
-  margin: 10px 20px 15px;
-}
-
-.set-min-max-button {
-
+  margin: 20px 15px 20px 15px;
 }
 
 .minmax input {
-  margin: auto;
+  /*position: relative;*/
+  /*margin: auto;*/
+  padding-left: 15px;
 }
 
 .minmax h4 {
   margin-bottom: 5px;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #D0D2D3;
-  text-align: center;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #D0D2D3;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #D0D2D3;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #D0D2D3;
+.min-max-button {
+  width: 100%;
+  margin: 20px auto;
 }
 
-.container .button {
-  display: inline-block;
-  width: 100%;
-}
+
 
 button:disabled,
 button[disabled]:active,
@@ -104,7 +89,7 @@ button[disabled]:hover
 }
 
 button {
-  font-size: 75%;
+  font-size: 100%;
   background-color: #D0D2D3;
   border: none;
   border-radius: 40px;
@@ -112,7 +97,7 @@ button {
   font-weight: lighter;
   margin: 20px 5px;
   text-decoration: none;
-  padding: 3px 5px 2px 5px;
+  padding: 8px 5px 8px 5px;
   width: 100px;
 }
 
@@ -124,69 +109,67 @@ button:active {
   background-color: #c60075;
 }
 
-.min-max-button,
+.button-group {
+  margin: 0 auto;
+}
+
+.button {
+  display: block;
+  width: 100%;
+}
+
 .reset-button {
   width: 100%;
 }
 
-
-@media screen and (max-width: 420px) {
-
-  .container button {
-    display: block;
-  }
-
-  button {
-    margin: 10px auto;
-    width: 200px;
-  }
-
-  .hint {
-    height: 50px;
-    margin: 10px 0;
-    vertical-align: auto;
-  }
-
-  .title {
-    font-size: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
+.game-box {
+  padding: 0px 10px;
+  margin: 20px 20px;
 }
 
-@media screen and (max-width: 300px) {
-  .title {
-    font-size: 80%;
-    padding: 10px 0;
-    text-align: center;
-  }
+.box {
+  border: 1px solid #D0D2D3;
+  padding: 10px 10px 10px 10px;
+  margin-top: 20px;
 }
 
-@media screen and (min-width: 200px) {
-  .hint, .last-guess {
-    margin: 0 auto;
-    width: 200px;
+.last-guess {
+  height: 86px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #D0D2D3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #D0D2D3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #D0D2D3;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #D0D2D3;
+}
+
+@media screen and (min-width: 500px) {
+
+  .guess-button, .clear-button {
+    display: inline-block;
+    width: 35%;
+    margin: 20px 20px;
+
+  }
+
+  .game-box {
+    width: 400px;
+    margin: 20px auto;
+  }
+
+  .min-max-button {
+    width: 120px;
+    margin-left: 40px;
   }
 
 }
 
-@media screen and (max-width: 275px) {
-
-  .container-inline-block {
-    width: 90%;
-  }
-
-  input {
-    width: 90%;
-  }
-  button {
-    width: 90%;
-  }
-
-  .title {
-    font-size: 60%;
-  }
-  .last-guess {
-    font-size: 64px;
-  }
+@media screen and (min-width: 700px) {
 }
