@@ -124,7 +124,7 @@ button:active {
 
 .game-box {
   padding: 0px 10px;
-  margin: 20px 20px;
+  margin: 35px 20px;
 }
 
 .box {
@@ -166,7 +166,7 @@ button:active {
 
   .game-box {
     width: 400px;
-    margin: 20px auto;
+    margin: 30px auto;
   }
 
   .min-max-button {
