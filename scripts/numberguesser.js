@@ -49,10 +49,10 @@ function testCurrentGuess(currentGuess) {
       return "Please enter a number between " + min + " and " + max;
     }
       else if (currentGuess > secretNumber) {
-        return("That is too high!");
+        return("That is too HIGH!");
       }
         else if (currentGuess < secretNumber) {
-          return("That is too low!");
+          return("That is too LOW!");
         }
           else if(currentGuess === secretNumber) {
             return("YOU GOT IT! Try again with a bigger range!");
