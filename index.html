@@ -8,51 +8,48 @@
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
   </head>
-<body>
+  <body>
     <header>
-        <div class="title-container">
-            <h1 class="title1">Number</h1>
-            <h1 class="title2">Guesser</h1>
-        </div>
+      <div class="title-container">
+        <h1 class="title1">Number</h1>
+        <h1 class="title2">Guesser</h1>
+      </div>
     </header>
 
     <div class="game-box">
-        <div class="form guess-form">
-            <input type="number" name="guess" id="current-guess" placeholder="Enter your guess" />
-            <div class="button-group">
-              <button class="button guess-button">Guess</button>
-              <button class="button clear-button">Clear</button>
-            </div>
+      <div class="form guess-form">
+        <input type="number" name="guess" id="current-guess" placeholder="Enter your guess" />
+        <div class="button-group">
+          <button class="button guess-button">Guess</button>
+          <button class="button clear-button">Clear</button>
         </div>
+      </div>
 
-        <div class="last-guess-box">
-            <div class="message-top"
-              <h2>Your last guess was</h2>
-            </div>
-            <div class="big-number-container">
-                <h3 class="last-guess"></h3>
-            </div>
-                <h2 class="hint message-bottom">Waiting for your guess...</h2>
+      <div class="last-guess-box">
+        <div class="message-top">
+          <h2>Your last guess was</h2>
         </div>
-        <div class="form box minmax-box">
-            <h2>Enter your guess range</h2>
-
-            <article class="minmax-form minmax">
-                <h4>Min</h4>
-                <input class="minmax-form" type="number" name="min" id="min-range" placeholder="Min" />
-            </article>
-
-            <article class="form minmax">
-                <h4>Max</h4>
-                <input class="minmax-form" type="number" name="max" id="max-range" placeholder="Max" />
-            </article>
-
-            <button class="min-max-button">Set</button>
+        <div class="big-number-container">
+          <h3 class="last-guess"></h3>
         </div>
-        <div class="container-inline button">
-            <button class="reset-button">Reset</button>
-        </div>
+        <h2 class="hint message-bottom">Waiting for your guess...</h2>
+      </div>
+      <div class="form box minmax-box">
+        <h2>Enter your guess range</h2>
+        <article class="minmax-form minmax">
+          <h4>Min</h4>
+          <input class="minmax-form" type="number" name="min" id="min-range" placeholder="Min" />
+        </article>
+        <article class="form minmax">
+          <h4>Max</h4>
+          <input class="minmax-form" type="number" name="max" id="max-range" placeholder="Max" />
+        </article>
+        <button class="minmax-button">Set</button>
+      </div>
+      <div class="container-inline button">
+        <button class="reset-button">Reset</button>
+      </div>
     </div>
     <script type="text/javascript" src="./scripts/numberguesser.js"></script>
-</body>
+  </body>
 </html>
