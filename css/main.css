@@ -139,6 +139,7 @@ button:active {
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #D0D2D3;
+  text-align: center;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: #D0D2D3;
