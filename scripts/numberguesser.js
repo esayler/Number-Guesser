@@ -44,7 +44,7 @@ function testCurrentGuess(currentGuess) {
     return "Please enter a number between " + min + " and " + max;
   }
     else if (isNaN(currentGuess) === true) {
-      return "You must enter a NUMBER between 1 and 100.";
+      return "Please enter a number between " + min + " and " + max;
     }
       else if (currentGuess > secretNumber) {
         return("That is too high!");
@@ -53,7 +53,7 @@ function testCurrentGuess(currentGuess) {
           return("That is too low!");
         }
           else if(currentGuess === secretNumber) {
-            return("YOU GOT IT!");
+            return("YOU GOT IT! Try again with a longer range!");
           }
 }
 
