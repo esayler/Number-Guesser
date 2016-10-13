@@ -63,6 +63,7 @@ function testCurrentGuess(currentGuess) {
 function updateText(newGuessValue, hintText) {
   if (newGuessValue === secretNumber && isNaN(newGuessValue) ===false) {
     document.querySelector('.last-guess').innerText = newGuessValue;
+    document.querySelector('.last-guess-message').innerText = "Your last guess was";
     document.querySelector('.hint').innerText = hintText;
     var updatedMin = currentMin()-10;
     var updatedMax = currentMax()+10;
@@ -73,6 +74,7 @@ function updateText(newGuessValue, hintText) {
     if (isNaN(newGuessValue) === false) {
       document.querySelector('.last-guess').innerText = newGuessValue;
       document.querySelector('.hint').innerText = hintText;
+      document.querySelector('.last-guess-message').innerText = "Your last guess was";
     }
       else if(newGuessValue === 'none') {
         document.querySelector('.last-guess').innerText = "";
